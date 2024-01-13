@@ -14,6 +14,13 @@ app.use((err, res, req, next) => {
   res.status(404).json("404");
 });
 
+<<<<<<< HEAD
 app.listen(3000, () => {
   console.log(`Server is running on port ${PORT}`);
+=======
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+>>>>>>> 081be9ec66420098381ce7ce9e4291ba35ec3658
 });

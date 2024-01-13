@@ -5,6 +5,7 @@ const router = Router();
 const { Admin, Course } = require("../db");
 
 // Admin Routes
+<<<<<<< HEAD
 router.post("/signup", async (req, res) => {
   // Implement admin signup logic
   const username = req.body.username;
@@ -46,6 +47,18 @@ router.get("/courses", adminMiddleware, async (req, res) => {
   const response = await Course.find({});
 
   res.json({ courses: response });
+=======
+router.post('/signup', (req, res) => {
+    // Implement admin signup logic
+});
+
+router.post('/courses', adminMiddleware, (req, res) => {
+    // Implement course creation logic
+});
+
+router.get('/courses', adminMiddleware, (req, res) => {
+    // Implement fetching all courses logic
+>>>>>>> 081be9ec66420098381ce7ce9e4291ba35ec3658
 });
 
 module.exports = router;
